@@ -4,7 +4,9 @@ node {
   }
 
   stage('test'){
-    sh 'ls -ahl'
-    sh './run_test.sh'
+    nodejs('Node-8.11.2') {
+      sh 'ls -ahl'
+      sh './run_test.sh'
+    }
   }
 }
