@@ -5,7 +5,6 @@ node {
 
   stage('test'){
     nodejs('Node-8.11.2') {
-      sh 'ls -ahl'
       sh './run_test.sh'
     }
   }
